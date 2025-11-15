@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { DynamicProvider } from "../components/DynamicProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,7 +21,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased bg-slate-950 text-slate-50`}>
-        <DynamicProvider>
           <div className="flex min-h-screen flex-col">
           <header className="w-full border-b border-slate-800 bg-slate-950/80 px-4 py-4 sm:px-6">
             <div className="mx-auto flex max-w-5xl items-center justify-between">
@@ -53,7 +51,6 @@ export default function RootLayout({
             </div>
           </footer>
           </div>
-        </DynamicProvider>
       </body>
     </html>
   );
